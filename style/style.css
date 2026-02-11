@@ -101,6 +101,11 @@ body {
   max-width: 370px;
   text-decoration: none;
   margin: 0 auto;
+  transition: all 0.2s linear;
+}
+.banner__btn:hover {
+  background-color: #b71013;
+  transform: scale(1.05);
 }
 @media (max-width: 1024px) {
   .banner__btn {
@@ -184,6 +189,10 @@ body {
   transition: opacity 0.3s;
   text-transform: uppercase;
   font-weight: 700;
+  transition: all 0.2s ease;
+}
+.nav__link:hover {
+  transform: scale(1.1);
 }
 @media (max-width: 1024px) {
   .nav__link {
@@ -285,6 +294,95 @@ body {
 }
 @media (max-width: 1024px) {
   .feature__text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.works__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 100%;
+  padding: 0;
+}
+@media (max-width: 1024px) {
+  .works__container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 767px) {
+  .works__container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+  }
+}
+
+.project__content {
+  aspect-ratio: 378/340;
+  position: relative;
+  display: flex;
+}
+.project__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.project__name {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(255, 67, 67, 0.8);
+  opacity: 0;
+  transition: all 0.4s linear;
+  flex-direction: column;
+}
+.project__name:hover {
+  opacity: 1;
+}
+.project__title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+@media (max-width: 1024px) {
+  .project__title {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 23px;
+  }
+}
+@media (max-width: 767px) {
+  .project__title {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 7px;
+  }
+}
+.project__text {
+  font-size: 18px;
+  line-height: 21px;
+}
+@media (max-width: 1024px) {
+  .project__text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .project__text {
     font-size: 14px;
     line-height: 16px;
   }
