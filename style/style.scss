@@ -409,7 +409,7 @@ body {
     aspect-ratio: 270/270;
   }
 
-  &__image{
+  &__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -424,7 +424,7 @@ body {
     }
   }
 
-  &__list{
+  &__list {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -445,7 +445,7 @@ body {
     }
   }
 
-  &__name{
+  &__name {
     font-size: 24px;
     line-height: 28px;
     font-weight: 700;
@@ -465,7 +465,7 @@ body {
     }
   }
 
-  &__position{
+  &__position {
     font-size: 18px;
     line-height: 21px;
     margin-bottom: 18px;
@@ -485,7 +485,7 @@ body {
     }
   }
 
-  &__text{
+  &__text {
     font-size: 18px;
     line-height: 21px;
     color: $text;
@@ -504,14 +504,14 @@ body {
     }
   }
 
-  &__link{
+  &__link {
     width: 39px;
     height: 39px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.1s ease;
-    border: 1px solid #C6CBCD;
+    border: 1px solid #c6cbcd;
 
     @media (max-width: $tablet) {
       column-gap: 4px;
@@ -523,8 +523,206 @@ body {
       margin-bottom: 49px;
     }
 
-     &:hover {
+    &:hover {
       transform: scale(1.2);
+    }
+  }
+}
+
+.testimonials {
+  @media (max-width: $tablet) {
+    max-width: 1024px;
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &__swiper {
+    padding: 0 0 45px;
+    .swiper-pagination {
+      bottom: 0;
+      display: flex;
+      column-gap: 25px;
+      justify-content: center;
+    }
+  }
+}
+
+#testimonials {
+  .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #7e5d6f;
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 0;
+    opacity: 1;
+
+    &-active {
+      background-color: #7e5d6f;
+    }
+  }
+}
+
+.testimonial {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  column-gap: 31px;
+  background-color: #7e5d6f;
+  padding: 0 20px;
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+  }
+
+  &__wrapper-photo {
+    aspect-ratio: 570 / 490;
+    display: flex;
+  }
+
+  &__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__quote {
+    padding: 40px 0;
+    color: #fff;
+
+    @media (max-width: $tablet) {
+      color: #fff;
+    }
+  }
+}
+
+.quote {
+  &__text {
+    font-family: "Cardo", serif;
+    font-size: 36px;
+    line-height: 49px;
+    font-style: italic;
+    text-transform: capitalize;
+    margin-bottom: 144px;
+    color: #fff;
+
+    @media (max-width: $tablet) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    @media (max-width: $mobile) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__autor {
+    font-size: 36px;
+    line-height: 49px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+
+    @media (max-width: $tablet) {
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 700;
+    }
+
+    @media (max-width: $mobile) {
+      margin-bottom: 95px;
+    }
+  }
+}
+
+.download {
+  &__container {
+    padding: 132px 0 114px;
+    text-align: center;
+
+    @media (max-width: $tablet) {
+      padding: 94px 0 78px;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 65px 0 45px;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 500;
+    margin-bottom: 22px;
+
+    @media (max-width: $tablet) {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 21px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 11px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media (max-width: $tablet) {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 46px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 13px;
+      line-height: 15px;
+      margin-bottom: 13px;
+    }
+  }
+
+  &__btn {
+    font-size: 24px;
+    line-height: 28px;
+    color: $text-color-primary;
+    font-weight: 900;
+    text-transform: uppercase;
+    background-color: $primary;
+    padding: 26px;
+    display: block;
+    max-width: 370px;
+    text-decoration: none;
+    margin: 0 auto;
+    transition: all 0.2s linear;
+
+    &:hover {
+      background-color: #b71013;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: $tablet) {
+      max-width: 313px;
+      padding: 29px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    @media (max-width: $mobile) {
+      max-width: 280px;
+      padding: 29px;
+      font-size: 18px;
+      line-height: 21px;
     }
   }
 }
