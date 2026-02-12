@@ -726,3 +726,48 @@ body {
     }
   }
 }
+
+.contact {
+  &__container {
+    padding: 71px 0 67px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    text-align: center;
+  }
+
+  &__location-title{
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+    margin-bottom: 29px;
+    max-width: 370px;
+    text-transform: uppercase;
+  }
+
+  &__location-text{
+    font-size: 18px;
+    line-height: 21px;
+    max-width: 370px;
+  }
+
+  &__share-title{
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+    margin-bottom: 49px;
+    max-width: 370px;
+    text-transform: uppercase;
+  }
+
+  &__link{
+    width: 39px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #c6cbcd;
+  }
+}
+
+
