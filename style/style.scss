@@ -355,6 +355,7 @@ body {
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 36px;
+    color: #fff;
 
     @media (max-width: $tablet) {
       font-size: 18px;
@@ -372,6 +373,7 @@ body {
   &__text {
     font-size: 18px;
     line-height: 21px;
+    color: #fff;
 
     @media (max-width: $tablet) {
       font-size: 14px;
@@ -387,6 +389,13 @@ body {
 
 .persons {
   padding: 114px 0;
+  @media (max-width: $tablet) {
+    padding: 78px 0;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 49px 0;
+  }
 
   &__container {
     display: grid;
@@ -405,15 +414,11 @@ body {
 }
 
 .people {
-  &__content {
-    aspect-ratio: 270/270;
-  }
-
   &__image {
     width: 100%;
-    height: 100%;
     object-fit: cover;
     margin-bottom: 31px;
+    aspect-ratio: 270/270;
 
     @media (max-width: $tablet) {
       margin-bottom: 25px;
@@ -425,23 +430,16 @@ body {
   }
 
   &__list {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
     column-gap: 6px;
     list-style: none;
     display: flex;
-    margin-bottom: 114px;
 
     @media (max-width: $tablet) {
       column-gap: 4px;
-      margin-bottom: 78px;
     }
 
     @media (max-width: $mobile) {
       column-gap: 5px;
-      margin-bottom: 49px;
     }
   }
 
@@ -530,16 +528,6 @@ body {
 }
 
 .testimonials {
-  @media (max-width: $tablet) {
-    max-width: 1024px;
-  }
-
-  @media (max-width: $mobile) {
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-  }
-
   &__swiper {
     padding: 0 0 45px;
     .swiper-pagination {
@@ -568,20 +556,21 @@ body {
 }
 
 .testimonial {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: center;
   align-items: center;
   column-gap: 31px;
   background-color: #7e5d6f;
   padding: 0 20px;
 
   @media (max-width: $mobile) {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 
   &__wrapper-photo {
     aspect-ratio: 570 / 490;
     display: flex;
+    max-width: 570px;
   }
 
   &__photo {
@@ -593,6 +582,7 @@ body {
   &__quote {
     padding: 40px 0;
     color: #fff;
+    max-width: 570px;
 
     @media (max-width: $tablet) {
       color: #fff;
@@ -607,7 +597,7 @@ body {
     line-height: 49px;
     font-style: italic;
     text-transform: capitalize;
-    margin-bottom: 144px;
+    margin-bottom: 17px;
     color: #fff;
 
     @media (max-width: $tablet) {
@@ -621,8 +611,8 @@ body {
   }
 
   &__autor {
-    font-size: 36px;
-    line-height: 49px;
+    font-size: 13px;
+    line-height: 15px;
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
@@ -640,17 +630,15 @@ body {
 }
 
 .download {
-  &__container {
-    padding: 132px 0 114px;
-    text-align: center;
+  padding: 132px 0 114px;
+  text-align: center;
 
-    @media (max-width: $tablet) {
-      padding: 94px 0 78px;
-    }
+  @media (max-width: $tablet) {
+    padding: 94px 0 78px;
+  }
 
-    @media (max-width: $mobile) {
-      padding: 65px 0 45px;
-    }
+  @media (max-width: $mobile) {
+    padding: 65px 0 45px;
   }
 
   &__title {
@@ -728,46 +716,133 @@ body {
 }
 
 .contact {
+  padding: 71px 0 67px;
+  background-color: #353c65;
+
+  @media (max-width: $tablet) {
+    padding: 47px 0 41px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 34px 0 28px;
+  }
+
   &__container {
-    padding: 71px 0 67px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
     text-align: center;
+
+    @media (max-width: $tablet) {
+      column-gap: 20px;
+    }
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+      row-gap: 64px;
+    }
   }
 
-  &__location-title{
+  &__title {
     font-size: 18px;
     line-height: 21px;
     font-weight: 700;
     margin-bottom: 29px;
-    max-width: 370px;
     text-transform: uppercase;
+    color: #fff;
+
+    @media (max-width: $tablet) {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 17px;
+    }
+
+    @media (max-width: $mobile) {
+      margin-bottom: 34px;
+    }
   }
 
-  &__location-text{
+  &__text {
     font-size: 18px;
     line-height: 21px;
-    max-width: 370px;
+    color: #fff;
+
+    @media (max-width: $tablet) {
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 
-  &__share-title{
-    font-size: 18px;
-    line-height: 21px;
-    font-weight: 700;
-    margin-bottom: 49px;
-    max-width: 370px;
-    text-transform: uppercase;
-  }
-
-  &__link{
+  &__link {
     width: 39px;
     height: 39px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid #c6cbcd;
+
+    @media (max-width: $tablet) {
+      width: 33px;
+      height: 33px;
+    }
+  }
+
+  &__list {
+    column-gap: 30px;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin-top: 49px;
+
+    @media (max-width: $tablet) {
+      column-gap: 22px;
+    }
+
+    @media (max-width: $mobile) {
+      column-gap: 16px;
+    }
   }
 }
 
+.author {
+  padding: 24px 0;
+  background-color: #2c3154;
 
+  @media (max-width: $tablet) {
+    padding: 14px 0;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 30px 0 28px;
+  }
+
+  &__container {
+    max-width: 410px;
+
+    @media (max-width: $tablet) {
+      max-width: 354px;
+    }
+
+    @media (max-width: $mobile) {
+      max-width: 320px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 18px;
+    line-height: 21px;
+    color: #808080;
+    text-transform: capitalize;
+
+    @media (max-width: $tablet) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__name {
+    color: #fff;
+    text-transform: capitalize;
+  }
+}
